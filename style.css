@@ -32,3 +32,17 @@
  .hero-scroll-stage .hero{top:68px;height:calc(100svh - 68px)}
 }
 @media(max-width:390px){.site-header{padding-inline:12px;gap:8px}.site-header .brand{max-width:47vw}.site-header .brand-logo{max-height:42px}.site-header .lang{font-size:.68rem}}
+
+/* v4: desktop hero transition — no prolonged empty raspberry panel */
+@media (min-width:851px){
+  .hero-scroll-stage{height:150svh}
+  .hero-scroll-stage .hero-content{
+    transform:translate3d(0,calc(var(--hero-progress,0) * -100vh),0);
+    opacity:clamp(0,calc(1 - var(--hero-progress,0) * 3),1);
+  }
+  .hero-scroll-stage + .section{margin-top:-25svh}
+  .hero-scroll-stage .btn-main{padding:21px 36px;font-size:1.08rem;gap:22px}
+}
+@media (min-width:851px) and (prefers-reduced-motion:reduce){
+  .hero-scroll-stage .hero-content{transform:none;opacity:1}
+}
