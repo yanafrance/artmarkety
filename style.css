@@ -12,3 +12,7 @@
 @media(max-width:850px){.hero-scroll-stage .hero{top:70px;height:calc(100svh - 70px)}.hero-scroll-stage .hero-art{opacity:1;background-position:59% center}.hero-scroll-stage .hero-content{padding-bottom:110px}.hero-scroll-stage .hero-content h1{max-width:640px}}
 @media(max-width:570px){.hero-scroll-stage .hero-art{background-position:60% center}.hero-scroll-stage .hero-content{padding-top:78px}}
 @media(prefers-reduced-motion:reduce){.hero-scroll-stage .hero-content{transform:none;opacity:1}.hero-scroll-stage .scroll-cue{opacity:1}}
+
+/* ArtmarketY approved horizontal brandmark */
+.brand-logo{display:block;width:clamp(170px,19vw,255px);height:auto;max-height:62px;object-fit:contain;object-position:left center}
+@media(max-width:570px){.brand-logo{width:clamp(158px,43vw,205px);max-height:54px}}
