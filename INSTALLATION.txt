@@ -1,0 +1,15 @@
+ArtmarketY — Nos Prestations
+
+Upload these files to the ROOT of https://github.com/yanafrance/artmarkety :
+index.html (replace)
+studio.html (replace)
+prestations.html (new)
+prestations.css (new)
+prestations.js (new)
+concept-one.png (new)
+
+Do not delete existing files, especially style.css, script.js, studio.css, studio.js, raspberry image and logo.
+
+After GitHub Pages deploy: https://yanafrance.github.io/artmarkety/prestations.html
+
+Note: individual service detail pages are planned for a later phase. The service enquiry links currently point to the existing contact section, whose form is still a demonstration and does not send email.
