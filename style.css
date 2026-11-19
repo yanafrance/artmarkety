@@ -46,3 +46,22 @@
 @media (min-width:851px) and (prefers-reduced-motion:reduce){
   .hero-scroll-stage .hero-content{transform:none;opacity:1}
 }
+
+/* v5 — compact desktop hero, readable mobile copy, footer logo */
+footer .footer-brand{display:inline-flex;align-items:center;max-width:190px;line-height:1}
+footer .footer-brand img{display:block;width:100%;height:auto;max-height:56px;object-fit:contain;object-position:left center}
+@media (min-width:851px){
+  .hero-scroll-stage .hero-content{padding-top:30px;padding-bottom:28px;max-width:770px}
+  .hero-scroll-stage .hero h1{font-size:clamp(3rem,5.25vw,5.65rem);line-height:1.035;margin:15px 0 14px;letter-spacing:-.065em}
+  .hero-scroll-stage .hero-sub{margin:0 0 20px;font-size:clamp(.98rem,1.45vw,1.12rem);line-height:1.5}
+  .hero-scroll-stage .eyebrow{margin:0}
+  .hero-scroll-stage .btn-main{padding:19px 32px;font-size:1.06rem}
+}
+@media (max-width:850px){
+  .hero-scroll-stage .hero-sub{position:relative;display:table;max-width:min(95%,520px);padding:8px 12px;margin-left:-12px;border-radius:12px;background:rgba(255,249,252,.80);color:#25314c;line-height:1.52;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  footer .footer-brand{max-width:155px}
+}
+@media (max-width:570px){
+  .hero-scroll-stage .hero-sub{font-size:1rem;max-width:calc(100% + 4px)}
+  .hero-scroll-stage .scroll-cue{color:#70364e;text-shadow:0 1px 3px rgba(255,255,255,.85)}
+}
