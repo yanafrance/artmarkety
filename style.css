@@ -16,19 +16,3 @@
 /* ArtmarketY approved horizontal brandmark */
 .brand-logo{display:block;width:clamp(170px,19vw,255px);height:auto;max-height:62px;object-fit:contain;object-position:left center}
 @media(max-width:570px){.brand-logo{width:clamp(158px,43vw,205px);max-height:54px}}
-
-/* Header sizing fix v3 — mobile: logo + menu + language in one row */
-.site-header{min-height:72px;gap:12px}
-.site-header .brand{flex:0 1 auto;min-width:0;max-width:260px}
-.site-header .brand-logo{display:block;width:clamp(175px,19vw,255px);height:auto;max-height:55px;object-fit:contain;object-position:left center}
-@media(max-width:850px){
- .site-header{height:68px;min-height:68px;padding:8px 16px;gap:10px;flex-wrap:nowrap}
- .site-header .brand{flex:0 1 auto;max-width:min(48vw,200px);min-width:0;margin-right:auto}
- .site-header .brand-logo{width:100%;max-width:200px;height:auto;max-height:48px;object-fit:contain}
- .site-header .menu-toggle{flex:0 0 auto;margin-left:0;padding:4px;font-size:1.45rem;line-height:1}
- .site-header .lang{display:flex;flex:0 0 auto;margin-left:0;gap:3px;font-size:.72rem}
- .site-header .lang button{padding:5px 2px}
- .site-header .nav{top:68px}
- .hero-scroll-stage .hero{top:68px;height:calc(100svh - 68px)}
-}
-@media(max-width:390px){.site-header{padding-inline:12px;gap:8px}.site-header .brand{max-width:47vw}.site-header .brand-logo{max-height:42px}.site-header .lang{font-size:.68rem}}
