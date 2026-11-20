@@ -1,25 +1,17 @@
-ARTMARKETY — RÉALISATIONS / 7 CONCEPTS APPROUVÉS
+ARTMARKETY — TARIFS & DEVIS
 
-IMPORTANT : téléverser dans la RACINE du dépôt GitHub (branche main) :
-- realisations.html
-- realisations.css
-- realisations.js
-- realisations-data.json
-- le dossier realisations-images avec ses 7 images JPG
+À envoyer à la RACINE du dépôt https://github.com/yanafrance/artmarkety :
+- tarifs.html
+- tarifs.css
+- tarifs.js
 
-Le logo artmarkety-logo.png est inclus uniquement en secours : si le dépôt contient déjà votre logo approuvé, NE LE REMPLACEZ PAS.
-La page réutilise le style.css et le script.js du site existant. Ne les remplacez pas.
+Ne remplacez PAS les fichiers existants style.css, script.js ou artmarkety-logo.png.
+La page réutilise le logo et les styles généraux déjà présents dans le dépôt.
 
-Lien GitHub : https://github.com/yanafrance/artmarkety
-Page : https://yanafrance.github.io/artmarkety/realisations.html
+IMPORTANT : pour rendre l'onglet « Tarifs & devis » accessible depuis toutes les autres pages, modifier son lien vers tarifs.html (au lieu de index.html#tarifs) dans les menus existants.
 
-POUR AJOUTER UNE CONCEPTION :
-1. Déposez une nouvelle image dans realisations-images, ex. concept-08.jpg.
-2. Ajoutez un objet à la fin du tableau realisations-data.json (virgule entre les objets).
-3. Renseignez id, name, category_fr, category_en, services et image.
-Pour remplacer une image, remplacez le JPG correspondant sans changer son nom.
-Pour supprimer un concept, supprimez son objet du JSON.
+Le bouton « Présenter mon projet » mène actuellement à index.html#contact. Vérifiez que ce point d'ancrage contient votre formulaire fonctionnel. Aucun formulaire d'envoi n'a été ajouté à cette version.
 
-ATTENTION : pour que le menu des AUTRES pages pointe vers cette page, remplacer leur lien Réalisations existant par realisations.html, si nécessaire.
-Les boutons Airbnb / Booking visibles dans les mockups sont des illustrations non cliquables.
-Les 7 visuels sont des concepts de démonstration, pas des réalisations clients.
+Les prix sont des prix de départ approuvés, à préciser par devis. Vérifier les mentions fiscales (TVA) avant mise en ligne.
+
+URL après publication : https://yanafrance.github.io/artmarkety/tarifs.html
