@@ -1,0 +1,58 @@
+[
+  {
+    "id": "concept-01",
+    "name": "BOTANEA",
+    "category_fr": "Cosmétique naturelle",
+    "category_en": "Natural cosmetics",
+    "services": "Site web · Identité visuelle · Packaging",
+    "image": "realisations-images/concept-01.jpg"
+  },
+  {
+    "id": "concept-02",
+    "name": "NOCTURNE",
+    "category_fr": "Parfumerie de luxe",
+    "category_en": "Luxury perfumery",
+    "services": "E-commerce · Logo · Packaging",
+    "image": "realisations-images/concept-02.jpg"
+  },
+  {
+    "id": "concept-03",
+    "name": "MAKOONA PARK",
+    "category_fr": "Parc de jeux pour enfants",
+    "category_en": "Indoor play centre",
+    "services": "Site web · Mascotte · Signalétique",
+    "image": "realisations-images/concept-03.jpg"
+  },
+  {
+    "id": "concept-04",
+    "name": "ÉPOQUES & OBJETS",
+    "category_fr": "Antiquités & brocante",
+    "category_en": "Antiques & vintage",
+    "services": "Catalogue · Estimation · Identité visuelle",
+    "image": "realisations-images/concept-04.jpg"
+  },
+  {
+    "id": "concept-05",
+    "name": "SYNAPTO",
+    "category_fr": "Technologie, data & IA",
+    "category_en": "Technology, data & AI",
+    "services": "Site web · Interface · Présentation",
+    "image": "realisations-images/concept-05.jpg"
+  },
+  {
+    "id": "concept-06",
+    "name": "MAISON VAURENA",
+    "category_fr": "Gîte de charme",
+    "category_en": "Charming holiday home",
+    "services": "Site vitrine · Réservation · Identité visuelle",
+    "image": "realisations-images/concept-06.jpg"
+  },
+  {
+    "id": "concept-07",
+    "name": "LIMASS",
+    "category_fr": "Savons artisanaux",
+    "category_en": "Handmade soaps",
+    "services": "Boutique · Identité visuelle · Packaging",
+    "image": "realisations-images/concept-07.jpg"
+  }
+]

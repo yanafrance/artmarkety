@@ -1,0 +1,25 @@
+ARTMARKETY — RÉALISATIONS / 7 CONCEPTS APPROUVÉS
+
+IMPORTANT : téléverser dans la RACINE du dépôt GitHub (branche main) :
+- realisations.html
+- realisations.css
+- realisations.js
+- realisations-data.json
+- le dossier realisations-images avec ses 7 images JPG
+
+Le logo artmarkety-logo.png est inclus uniquement en secours : si le dépôt contient déjà votre logo approuvé, NE LE REMPLACEZ PAS.
+La page réutilise le style.css et le script.js du site existant. Ne les remplacez pas.
+
+Lien GitHub : https://github.com/yanafrance/artmarkety
+Page : https://yanafrance.github.io/artmarkety/realisations.html
+
+POUR AJOUTER UNE CONCEPTION :
+1. Déposez une nouvelle image dans realisations-images, ex. concept-08.jpg.
+2. Ajoutez un objet à la fin du tableau realisations-data.json (virgule entre les objets).
+3. Renseignez id, name, category_fr, category_en, services et image.
+Pour remplacer une image, remplacez le JPG correspondant sans changer son nom.
+Pour supprimer un concept, supprimez son objet du JSON.
+
+ATTENTION : pour que le menu des AUTRES pages pointe vers cette page, remplacer leur lien Réalisations existant par realisations.html, si nécessaire.
+Les boutons Airbnb / Booking visibles dans les mockups sont des illustrations non cliquables.
+Les 7 visuels sont des concepts de démonstration, pas des réalisations clients.
