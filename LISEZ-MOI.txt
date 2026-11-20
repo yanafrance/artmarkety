@@ -1,15 +1,8 @@
-ArtmarketY — CORRECTIF ACCUEIL PC + MOBILE
+ArtmarketY — aperçu du lien
 
-Chargez dans la RACINE du dépôt GitHub les 5 fichiers suivants :
-index.html
-style.css
-home-layout.css
-home-refresh.js
-studio-crystal-fish.png
+Déposer index.html et artmarkety-preview.jpg à la racine du dépôt GitHub, remplacer index.html existant. Ne pas effacer les autres fichiers.
 
-Ne supprimez aucun autre fichier du dépôt. Les autres pages ne changent pas.
-Le fichier index.html utilise des versions de CSS pour éviter que Chrome affiche l’ancien style.
-Après publication, ouvrez https://yanafrance.github.io/artmarkety/?v=20261120-2
-Si besoin, actualisez avec Ctrl+F5 sur ordinateur.
+Repo : https://github.com/yanafrance/artmarkety
+Site : https://yanafrance.github.io/artmarkety/
 
-La messagerie de contact reste en mode démonstration.
+Les applications peuvent conserver l’ancien aperçu en cache. Le nouveau visuel ne sera visible qu’après publication GitHub Pages et actualisation du cache du réseau social.
