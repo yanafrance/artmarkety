@@ -1,17 +1,7 @@
-ARTMARKETY — TARIFS & DEVIS
+ArtmarketY — Accueil renouvelé
 
-À envoyer à la RACINE du dépôt https://github.com/yanafrance/artmarkety :
-- tarifs.html
-- tarifs.css
-- tarifs.js
-
-Ne remplacez PAS les fichiers existants style.css, script.js ou artmarkety-logo.png.
-La page réutilise le logo et les styles généraux déjà présents dans le dépôt.
-
-IMPORTANT : pour rendre l'onglet « Tarifs & devis » accessible depuis toutes les autres pages, modifier son lien vers tarifs.html (au lieu de index.html#tarifs) dans les menus existants.
-
-Le bouton « Présenter mon projet » mène actuellement à index.html#contact. Vérifiez que ce point d'ancrage contient votre formulaire fonctionnel. Aucun formulaire d'envoi n'a été ajouté à cette version.
-
-Les prix sont des prix de départ approuvés, à préciser par devis. Vérifier les mentions fiscales (TVA) avant mise en ligne.
-
-URL après publication : https://yanafrance.github.io/artmarkety/tarifs.html
+Uploader à la racine du dépôt : index.html, style.css, home-refresh.js, studio-crystal-fish.png.
+Ne supprimez pas les fichiers existants : script.js, service-effects.js, button-sounds.js, artmarkety-logo.png, raspberries-hero.jpg.
+Les trois vignettes de réalisations sont des illustrations CSS originales, pas les moodboards approuvés. Toutes les vignettes mènent à realisations.html.
+Les liens tarifs et réalisations utilisent tarifs.html et realisations.html : vérifiez les noms exacts sur GitHub.
+La demande de contact reste une démonstration, sans envoi de courriel.
