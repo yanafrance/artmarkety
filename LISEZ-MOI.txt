@@ -1,8 +1,0 @@
-ArtmarketY — aperçu du lien
-
-Déposer index.html et artmarkety-preview.jpg à la racine du dépôt GitHub, remplacer index.html existant. Ne pas effacer les autres fichiers.
-
-Repo : https://github.com/yanafrance/artmarkety
-Site : https://yanafrance.github.io/artmarkety/
-
-Les applications peuvent conserver l’ancien aperçu en cache. Le nouveau visuel ne sera visible qu’après publication GitHub Pages et actualisation du cache du réseau social.
