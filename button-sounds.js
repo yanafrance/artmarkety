@@ -1,37 +1,16 @@
-/* ArtmarketY — richer tactile sound for primary CTA buttons.
-   No sound until user explicitly enables card sounds, if that preference exists.
-   Does not affect navigation, card click handlers, or page layout. */
+/* ArtmarketY — optional original sound identity */
 (()=>{'use strict';
-let context;
-function soundAllowed(){
-  try { const setting=localStorage.getItem('artmarkety-service-sound'); return setting==='on'; }
-  catch(e){return false;}
-}
-function isPrimaryButton(el){
-  if(!el || el.closest('.service-card, .service-sound-control, .nav, .site-header, .lang-switch, .menu-toggle'))return false;
-  return el.matches('.btn-main, .prestations-hero-button, .btn-primary, .cta-button, .primary-button, [data-premium-click]');
-}
-function play(){
-  if(!soundAllowed())return;
-  const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)return;
-  try{
-    context=context||new Audio();if(context.state==='suspended')context.resume();
-    const t=context.currentTime;const dur=.115;
-    const buffer=context.createBuffer(1,Math.ceil(context.sampleRate*dur),context.sampleRate);
-    const arr=buffer.getChannelData(0);
-    for(let i=0;i<arr.length;i++){
-      const s=i/context.sampleRate;
-      const tick=(Math.random()*2-1)*Math.exp(-s*95)*.58;
-      const body=Math.sin(2*Math.PI*(235-65*s/dur)*s)*Math.exp(-s*38)*.36;
-      const snap=(Math.random()*2-1)*Math.exp(-Math.max(0,s-.022)*145)*(s>.022? .18:0);
-      arr[i]=tick+body+snap;
-    }
-    const src=context.createBufferSource();src.buffer=buffer;
-    const filter=context.createBiquadFilter();filter.type='lowpass';filter.frequency.value=3100;
-    const gain=context.createGain();gain.gain.setValueAtTime(.0001,t);gain.gain.exponentialRampToValueAtTime(.36,t+.004);gain.gain.exponentialRampToValueAtTime(.0001,t+dur);
-    src.connect(filter).connect(gain).connect(context.destination);src.start(t);src.stop(t+dur+.01);
-  }catch(e){}
-}
-// Delegation survives dynamic language and content updates.
-document.addEventListener('click',e=>{const target=e.target.closest('a,button,[role="button"]');if(isPrimaryButton(target))play()},true);
+const key='artmarkety-service-sound';let enabled=false,ctx,last=0;
+try{enabled=localStorage.getItem(key)==='on'}catch{}
+const AC=window.AudioContext||window.webkitAudioContext;
+if(!AC)return;
+const motifs={nav:[[523.25,0,.085]],service:[[659.25,0,.12]],price:[[523.25,0,.12],[783.99,.045,.13]],gallery:[[783.99,0,.13],[1046.5,.035,.13]],quote:[[523.25,0,.13],[659.25,.035,.14],[783.99,.07,.13]],next:[[659.25,0,.10],[783.99,.045,.12]],back:[[659.25,0,.10],[523.25,.04,.12]],success:[[523.25,0,.28],[659.25,.05,.28],[783.99,.10,.32]]};
+async function play(kind){if(!enabled||performance.now()-last<65)return;last=performance.now();try{ctx=ctx||new AC();if(ctx.state==='suspended')await ctx.resume();if(!enabled)return;const start=ctx.currentTime+.005;for(const [hz,offset,duration] of motifs[kind]){const t=start+offset;for(const [ratio,amp] of [[1,.045],[2,.009]]){const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=hz*ratio;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(amp,t+.008);g.gain.exponentialRampToValueAtTime(.0001,t+duration);o.connect(g).connect(ctx.destination);o.start(t);o.stop(t+duration+.01)}}}catch{}}
+const style=document.createElement('style');style.textContent='.am-sound-toggle{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 30px;width:30px;height:32px;padding:4px!important;margin:0!important;border:0!important;background:transparent!important;color:#922449!important;cursor:pointer;border-radius:6px;line-height:1}.am-sound-toggle svg{width:19px;height:19px;display:block}.am-sound-toggle:focus-visible{outline:2px solid #922449;outline-offset:2px}.am-sound-toggle[aria-pressed=false]{color:#697184!important}';document.head.append(style);
+const b=document.createElement('button');b.type='button';b.className='am-sound-toggle';const host=document.querySelector('header .lang,header .langs')||document.querySelector('header');if(host)host.append(b);
+function label(){const en=document.documentElement.lang==='en'||document.body.dataset.lang==='en';const text=en?(enabled?'Mute website sounds':'Enable website sounds'):(enabled?'Désactiver les sons du site':'Activer les sons du site');b.title=text;b.setAttribute('aria-label',text);b.setAttribute('aria-pressed',String(enabled));b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9z"/>'+(enabled?'<path d="M16 9a4 4 0 0 1 0 6m3-9a8 8 0 0 1 0 12"/>':'<path d="m16 9 5 6m0-6-5 6"/>')+'</svg>'}
+label();b.addEventListener('click',()=>{enabled=!enabled;try{localStorage.setItem(key,enabled?'on':'off')}catch{}label();if(enabled)play('quote')});new MutationObserver(label).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});new MutationObserver(label).observe(document.body,{attributes:true,attributeFilter:['data-lang']});window.addEventListener('storage',e=>{if(e.key===key){enabled=e.newValue==='on';label()}});
+document.addEventListener('click',e=>{const a=e.target.closest('a,button,[role="button"],summary');if(!a||a.disabled||a.closest('.am-sound-toggle,[data-lang],.language,.lang,.langs,#close,.close')||e.button!==0)return;const href=a.getAttribute('href')||'';if(a.id==='next'||a.id==='back'){const before=document.querySelector('.step.active');queueMicrotask(()=>{if(before&&before!==document.querySelector('.step.active'))play(a.id==='next'?'next':'back')});return}if(a.type==='submit')return;let kind;if(a.matches('.landing-card-link,.price-line'))kind='price';else if(a.matches('.landing-image,.featured-image,.project button')||/\.(jpg|png|webp)(\?|$)/i.test(href))kind='gallery';else if(a.matches('.service-card,.service-link'))kind='service';else if(href.includes('contact.html')||href.includes('#contact'))kind='quote';else if(a.matches('.landing-back,.underlink'))kind='back';else if(a.closest('header,nav')||a.matches('.btn,.primary-action,.prestations-hero-button,.home-pill,.studio-scroll-link,.studio-outline,.button'))kind='nav';if(!kind)return;play(kind);},true);
+// Confirmation only after arrival on the actual thank-you page; browsers may require a fresh gesture.
+if(location.pathname.endsWith('/merci.html')&&enabled){document.addEventListener('pointerdown',e=>{if(!e.target.closest('.am-sound-toggle'))play('success')},{once:true});}
 })();
