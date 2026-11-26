@@ -6,3 +6,12 @@
 .print-concept{border:1px solid #eee0e6;border-radius:18px;overflow:hidden;background:white;min-width:0}.detail-gallery .print-enlarge{border:0;border-radius:0}.print-enlarge img{aspect-ratio:16/10;object-fit:contain;background:#faf7f5;border-radius:0}.print-caption{padding:20px}.print-caption h3{margin:0 0 8px}.print-caption p{margin:0 0 16px}.detail-gallery .print-quote{display:inline-flex;background:#981448;color:white;border-radius:30px;padding:12px 18px;font-size:.9rem}.print-quote:hover{background:#711037}
 /* Final service layout */
 .service-detail-page .detail-hero-new h1{font-size:clamp(2.2rem,4.1vw,4.7rem);overflow-wrap:normal;word-break:normal;hyphens:auto;line-height:1.08}.service-detail-page .detail-hero-graphic{padding:0;min-height:0;background:transparent;border:0;border-radius:22px}.service-detail-page .detail-cover{width:100%;aspect-ratio:16/10;object-fit:cover}.service-detail-page .detail-gallery img{width:100%;aspect-ratio:16/10;object-fit:cover}.service-detail-page .compact-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.service-detail-page .compact-gallery .print-caption{padding:14px}.contract-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0}.contract-grid article,.service-faq{border:1px solid #e4e5eb;border-radius:16px;padding:22px;background:#fff}.service-faq{margin:12px 0}.service-faq summary{cursor:pointer;font-weight:700;color:#132644}.service-faq p{margin:12px 0 0}.seo-illustration{border:1px solid #e4e5eb;box-shadow:0 12px 40px #13264412}.seo-result+.seo-result{border-top:1px solid #e4e5eb;margin-top:16px}.seo-result small{font-weight:700}.detail-hero-inner>div{min-width:0}@media(max-width:700px){.service-detail-page .compact-gallery,.contract-grid{grid-template-columns:1fr}.service-detail-page .detail-hero-new h1{font-size:clamp(2rem,8vw,3rem)}}
+
+/* Desktop hero sizing: preserve existing mobile layout. */
+@media (min-width: 851px) {
+ .service-detail-page .detail-hero-new { padding-inline: clamp(32px, 5vw, 90px); }
+ .service-detail-page .detail-hero-new > .detail-hero-inner { width: 100%; max-width: 1440px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(28px, 4vw, 64px); }
+ .service-detail-page .detail-hero-graphic:has(.detail-cover) { width: 100%; max-width: none; }
+ .service-detail-page .detail-hero-graphic .detail-cover { width: 100%; max-width: none; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+ .service-detail-page .detail-hero-new h1 { hyphens: none; font-size: clamp(2.1rem, 3.65vw, 4.5rem); }
+}
