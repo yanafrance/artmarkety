@@ -1,7 +1,0 @@
-ARTMARKETY - MISE A JOUR PRESTATIONS
-
-Fichiers à déposer à la racine du dépôt GitHub : index.html, script.js, service-details.js, service-details.css.
-Ne pas supprimer les autres fichiers.
-Cette mise à jour remplace les pages provisoires #service/... par 12 présentations FR/EN.
-Les pages Tarifs, Portfolio, Contact et la Sound Identity sont conservées.
-Après publication, vérifier les 12 pages, les boutons de devis et les versions mobile/desktop.
