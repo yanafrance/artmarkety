@@ -5,7 +5,10 @@
     "category_fr": "Cosmétique naturelle",
     "category_en": "Natural cosmetics",
     "services": "Site web · Identité visuelle · Packaging",
-    "image": "realisations-images/concept-01.jpg"
+    "image": "realisations-images/concept-01.jpg",
+    "services_en": "Website · Visual identity · Packaging",
+    "tags": "web identity packaging",
+    "service": "site"
   },
   {
     "id": "concept-02",
@@ -13,7 +16,10 @@
     "category_fr": "Parfumerie de luxe",
     "category_en": "Luxury perfumery",
     "services": "E-commerce · Logo · Packaging",
-    "image": "realisations-images/concept-02.jpg"
+    "image": "realisations-images/concept-02.jpg",
+    "services_en": "Online shop · Logo · Packaging",
+    "tags": "web identity packaging",
+    "service": "site"
   },
   {
     "id": "concept-03",
@@ -21,23 +27,32 @@
     "category_fr": "Parc de jeux pour enfants",
     "category_en": "Indoor play centre",
     "services": "Site web · Mascotte · Signalétique",
-    "image": "realisations-images/concept-03.jpg"
+    "image": "realisations-images/concept-03.jpg",
+    "services_en": "Website · Mascot · Signage",
+    "tags": "web identity print",
+    "service": "branding"
   },
   {
     "id": "concept-04",
     "name": "ÉPOQUES & OBJETS",
     "category_fr": "Antiquités & brocante",
     "category_en": "Antiques & vintage",
-    "services": "Catalogue · Estimation · Identité visuelle",
-    "image": "realisations-images/concept-04.jpg"
+    "services": "Catalogue · Identité visuelle",
+    "image": "realisations-images/concept-04.jpg",
+    "services_en": "Catalogue · Visual identity",
+    "tags": "identity print",
+    "service": "print"
   },
   {
     "id": "concept-05",
     "name": "SYNAPTO",
     "category_fr": "Technologie, data & IA",
     "category_en": "Technology, data & AI",
-    "services": "Site web · Interface · Présentation",
-    "image": "realisations-images/concept-05.jpg"
+    "services": "Site web · Interface",
+    "image": "realisations-images/concept-05.jpg",
+    "services_en": "Website · Interface",
+    "tags": "web identity",
+    "service": "site"
   },
   {
     "id": "concept-06",
@@ -45,7 +60,10 @@
     "category_fr": "Gîte de charme",
     "category_en": "Charming holiday home",
     "services": "Site vitrine · Réservation · Identité visuelle",
-    "image": "realisations-images/concept-06.jpg"
+    "image": "realisations-images/concept-06.jpg",
+    "services_en": "Website · Booking · Visual identity",
+    "tags": "web identity",
+    "service": "site"
   },
   {
     "id": "concept-07",
@@ -53,6 +71,119 @@
     "category_fr": "Savons artisanaux",
     "category_en": "Handmade soaps",
     "services": "Boutique · Identité visuelle · Packaging",
-    "image": "realisations-images/concept-07.jpg"
+    "image": "realisations-images/concept-07.jpg",
+    "services_en": "Online shop · Visual identity · Packaging",
+    "tags": "web identity packaging",
+    "service": "branding"
+  },
+  {
+    "id": "concept-08",
+    "name": "CACAO 71",
+    "category_fr": "Chocolaterie artisanale",
+    "category_en": "Artisan chocolate",
+    "services": "Packaging · Coffrets · Étiquettes",
+    "services_en": "Packaging · Gift boxes · Labels",
+    "tags": "packaging identity",
+    "service": "print",
+    "image": "realisations-images/concept-08.jpg"
+  },
+  {
+    "id": "concept-09",
+    "name": "CAFÉ GOURMAND",
+    "category_fr": "Café & restauration",
+    "category_en": "Café & dining",
+    "services": "Enseigne · Menu · Communication",
+    "services_en": "Signage · Menu · Communication",
+    "tags": "print identity",
+    "service": "print",
+    "image": "realisations-images/concept-09.jpg"
+  },
+  {
+    "id": "concept-10",
+    "name": "VELOX",
+    "category_fr": "Sport & cyclisme",
+    "category_en": "Sport & cycling",
+    "services": "Identité · Textile · Publicité",
+    "services_en": "Identity · Apparel · Advertising",
+    "tags": "identity marketing",
+    "service": "branding",
+    "image": "realisations-images/concept-10.jpg"
+  },
+  {
+    "id": "concept-11",
+    "name": "ESCAPADES EN PROVENCE",
+    "category_fr": "Tourisme",
+    "category_en": "Travel",
+    "services": "Brochure · Mise en page",
+    "services_en": "Brochure · Editorial design",
+    "tags": "print",
+    "service": "print",
+    "image": "realisations-images/concept-11.jpg"
+  },
+  {
+    "id": "concept-12",
+    "name": "DOUCEUR NATURELLE",
+    "category_fr": "Cosmétiques",
+    "category_en": "Cosmetics",
+    "services": "Packaging · Étiquettes",
+    "services_en": "Packaging · Labels",
+    "tags": "packaging",
+    "service": "print",
+    "image": "realisations-images/concept-12.jpg"
+  },
+  {
+    "id": "concept-13",
+    "name": "HARMONIE",
+    "category_fr": "Papeterie de marque",
+    "category_en": "Brand stationery",
+    "services": "Cartes · Papeterie",
+    "services_en": "Cards · Stationery",
+    "tags": "print identity",
+    "service": "print",
+    "image": "realisations-images/concept-13.jpg"
+  },
+  {
+    "id": "concept-14",
+    "name": "UNIVERS NAUTIQUE",
+    "category_fr": "Nautisme",
+    "category_en": "Marine lifestyle",
+    "services": "Identité · Supports de marque",
+    "services_en": "Identity · Brand collateral",
+    "tags": "identity print",
+    "service": "branding",
+    "image": "realisations-images/concept-14.jpg"
+  },
+  {
+    "id": "concept-15",
+    "name": "ÉCLAT MINÉRAL",
+    "category_fr": "Design & luxe",
+    "category_en": "Design & luxury",
+    "services": "Direction artistique · Visuels publicitaires",
+    "services_en": "Art direction · Advertising visuals",
+    "tags": "marketing",
+    "service": "marketing",
+    "image": "realisations-images/concept-15.jpg"
+  },
+  {
+    "id": "concept-16",
+    "name": "ATELIER COULEUR",
+    "category_fr": "Commerce & décoration",
+    "category_en": "Retail & decor",
+    "services": "Packaging · Sacs · Identité",
+    "services_en": "Packaging · Bags · Identity",
+    "tags": "packaging identity",
+    "service": "print",
+    "image": "realisations-images/concept-16.jpg"
+  },
+  {
+    "id": "concept-17",
+    "name": "STUDIO DIGITAL",
+    "category_fr": "Communication digitale",
+    "category_en": "Digital communication",
+    "services": "Visuels · Contenus digitaux",
+    "services_en": "Visuals · Digital content",
+    "tags": "marketing",
+    "service": "marketing",
+    "image": "realisations-images/concept-17.jpg"
   }
 ]
